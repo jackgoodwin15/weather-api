@@ -7,6 +7,7 @@ public class MapPOJO {
     MainPOJO main;
     int visibility;
     WindPOJO wind;
+    RainPOJO rain;
     CloudPOJO clouds;
     int dt;
     SysPOJO sys;
@@ -17,13 +18,14 @@ public class MapPOJO {
 
     public MapPOJO() {}
 
-    public MapPOJO(CoordPOJO coord, WeatherPOJO[] weather, String base, MainPOJO main, int visibility, WindPOJO wind, CloudPOJO clouds, int dt, SysPOJO sys, int timezone, int id, String name, int cod) {
+    public MapPOJO(CoordPOJO coord, WeatherPOJO[] weather, String base, MainPOJO main, int visibility, WindPOJO wind, RainPOJO rain, CloudPOJO clouds, int dt, SysPOJO sys, int timezone, int id, String name, int cod) {
         this.coord = coord;
         this.weather = weather;
         this.base = base;
         this.main = main;
         this.visibility = visibility;
         this.wind = wind;
+        this.rain = rain;
         this.clouds = clouds;
         this.dt = dt;
         this.sys = sys;
@@ -79,6 +81,14 @@ public class MapPOJO {
 
     public void setWind(WindPOJO wind) {
         this.wind = wind;
+    }
+
+    public RainPOJO getRain() {
+        return rain;
+    }
+
+    public void setRain(RainPOJO rain) {
+        this.rain = rain;
     }
 
     public CloudPOJO getClouds() {

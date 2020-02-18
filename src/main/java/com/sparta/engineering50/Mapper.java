@@ -15,10 +15,10 @@ public class Mapper {
         objectMapper = new ObjectMapper();
     }
 
-    public void readJsonToObject() {
+    public void readJsonToObjectByCityName(String city) {
         String key = getApiKey();
         try {
-            mapPOJO = objectMapper.readValue(new URL("http://api.openweathermap.org/data/2.5/weather?q=London&appid=" + key), MapPOJO.class);
+            mapPOJO = objectMapper.readValue(new URL("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key), MapPOJO.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -28,7 +28,7 @@ public class Mapper {
         return mapPOJO;
     }
 
-    public String getApiKey() {
+    private String getApiKey() {
         Properties prop = new Properties();
 
         try (InputStream input = Mapper.class.getClassLoader().getResourceAsStream("config.properties")) {

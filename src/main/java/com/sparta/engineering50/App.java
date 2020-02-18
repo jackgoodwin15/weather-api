@@ -6,7 +6,7 @@ public class App
     {
         Mapper mapper = new Mapper();
         mapper.createObjectMapper();
-        mapper.readJsonToObject();
+        mapper.readJsonToObjectByCityName("Manchester");
 
         MapPOJO mapPOJO = mapper.getMapPOJO();
     }
