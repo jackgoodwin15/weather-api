@@ -1,29 +1,29 @@
 package com.sparta.engineering50;
 
 public class CoordPOJO {
-    int lon;
-    int lat;
+    double lon;
+    double lat;
 
     public CoordPOJO(){}
 
-    public CoordPOJO(int lon, int lat) {
+    public CoordPOJO(double lon, double lat) {
         this.lon = lon;
         this.lat = lat;
     }
 
-    public int getLon() {
+    public double getLon() {
         return lon;
     }
 
-    public void setLon(int lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 
-    public int getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(int lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 }
